@@ -10,6 +10,7 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
   end
 
+  #userの最大数を制限
   test "name should be present" do
     @user.name = "a" * 51
     assert_not @user.valid?
